@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace _NET_core___razor
 {
@@ -23,7 +25,17 @@ namespace _NET_core___razor
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            // Server connection
+            services.AddDbContextPool<MariaDbContext>(options => options
+                .UseMySql(
+                    Configuration.GetConnectionString("MariaDbConnectionString"),
+                    mySqlOptions => mySqlOptions.ServerVersion(new Version(10, 4, 19), ServerType.MariaDb)
+                )
+            );
+
+            // Other dependencies
+            services.AddRazorPages()
+                .AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
