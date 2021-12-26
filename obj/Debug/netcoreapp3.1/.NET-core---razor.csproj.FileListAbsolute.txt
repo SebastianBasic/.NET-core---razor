@@ -361,3 +361,6 @@ D:\xampp\htdocs\.NET-core---razor\bin\Debug\netcoreapp3.1\Pomelo.EntityFramework
 D:\xampp\htdocs\.NET-core---razor\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
 D:\xampp\htdocs\.NET-core---razor\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\xampp\htdocs\.NET-core---razor\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\xampp\htdocs\.NET-core---razor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Index.cshtml.g.cs
+D:\xampp\htdocs\.NET-core---razor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Create.cshtml.g.cs
+D:\xampp\htdocs\.NET-core---razor\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Edit.cshtml.g.cs

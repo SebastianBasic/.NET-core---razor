@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\xampp\\htdocs\\.NET-core---razor\\Pages\\BookList\\Create.cshtml",
+      "TargetPath": "Pages\\BookList\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\xampp\\htdocs\\.NET-core---razor\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -14422,8 +14427,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\xampp\\htdocs\\.NET-core---razor\\Pages\\BookList\\Edit.cshtml",
+      "TargetPath": "Pages\\BookList\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\xampp\\htdocs\\.NET-core---razor\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\xampp\\htdocs\\.NET-core---razor\\Pages\\BookList\\Index.cshtml",
+      "TargetPath": "Pages\\BookList\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
