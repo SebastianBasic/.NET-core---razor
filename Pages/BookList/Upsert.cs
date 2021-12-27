@@ -9,21 +9,33 @@ using Microsoft.EntityFrameworkCore;
 namespace _NET_core___razor.Pages.BookList
 {
 
-    public class EditModel : PageModel
+    public class UpsertModel : PageModel
     {
         private readonly MariaDbContext _db;
 
         [BindProperty]        
         public Book Book { get; set; }
 
-        public EditModel(MariaDbContext db)
+        public UpsertModel(MariaDbContext db)
         {
             _db = db;
         }
 
-        public async Task OnGet(int id)
+        public async Task<IActionResult> OnGet(int? id)
         {
-            Book = await _db.Book.FindAsync(id);
+            Book = new Book();
+
+            if(id == null){
+                return Page();
+            }else{
+                Book = await _db.Book.FirstOrDefaultAsync(u => u.id == id);
+
+                if(Book == null) {
+                    return NotFound();
+                }else{
+                    return Page();
+                }
+            }
         }
         
 
@@ -31,10 +43,12 @@ namespace _NET_core___razor.Pages.BookList
         {
             if(ModelState.IsValid)
             {
-                var BookFromDb = await _db.Book.FindAsync(Book.id);
-                BookFromDb.Name = Book.Name;
-                BookFromDb.Author = Book.Author;
-                BookFromDb.ISBN = Book.ISBN;
+                if(Book.id == 0)
+                {
+                    _db.Book.Add(Book);
+                }else{
+                    _db.Book.Update(Book);
+                }
 
                 await _db.SaveChangesAsync();
 

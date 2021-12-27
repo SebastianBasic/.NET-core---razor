@@ -33,9 +33,11 @@ namespace _NET_core___razor
                 )
             );
 
-            // Other dependencies
+            // Other services
             services.AddRazorPages()
                 .AddRazorRuntimeCompilation();
+
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +63,7 @@ namespace _NET_core___razor
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
         }

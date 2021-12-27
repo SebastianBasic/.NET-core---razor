@@ -14442,6 +14442,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\xampp\\htdocs\\.NET-core---razor\\Pages\\BookList\\Upsert.cshtml",
+      "TargetPath": "Pages\\BookList\\Upsert.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\xampp\\htdocs\\.NET-core---razor\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
